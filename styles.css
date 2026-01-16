@@ -15,17 +15,28 @@ body{
     gap: 12px;
 }
 
-.playtable{
+.gameboard{
     display: grid;
     grid-template:repeat(3,80px)/repeat(3,80px);
     gap: 8px;
 }
 
-.playtable > div{
+.gameboard > div{
     background-color: white;
     height: 100%;
     width: 100%;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard > div > span {
+  font-size: 40px;
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+  background-clip: text;
 }
 
 body > button{
