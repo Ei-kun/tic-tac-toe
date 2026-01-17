@@ -23,6 +23,12 @@ h1{
     margin: 0;
 }
 
+.turn{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
 .gameboard{
     display: grid;
     grid-template:repeat(3,80px)/repeat(3,80px);

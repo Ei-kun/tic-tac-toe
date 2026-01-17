@@ -3,13 +3,16 @@ const game=( function() {
     let turn=1;
     const playTurn= function(row,col,element){
         if(board[row][col]===""){
+            const displayTurn=document.querySelector(".turn");
             if(turn%2===1){
                 board[row][col]="X";
                 element.querySelector("span").innerText="X";
+                displayTurn.innerHTML="O's turn"
             }
             else{
                 board[row][col]="O";
                 element.querySelector("span").innerText="O";
+                displayTurn.innerHTML="X's turn";
             }
             turn++;
             checkWinner();
@@ -53,8 +56,10 @@ const game=( function() {
 
     const toggle=function(){
         const header=document.querySelector(".header");
+        const displayTurn=document.querySelector(".turn");
         const gameBoard=document.querySelector(".gameboard");
         const restart=document.querySelector(".restart");
+        displayTurn.classList.toggle("hidden");
         header.classList.toggle("hidden");
         gameBoard.classList.toggle("hidden");
         restart.classList.toggle("hidden");
@@ -88,6 +93,8 @@ const game=( function() {
 
     const reset=function(){
         turn=1;
+        const displayTurn=document.querySelector(".turn");
+        displayTurn.innerHTML="X's turn";
         for(let x=0;x<3;x++){
             for(let y=0;y<3;y++){
                 board[x][y]="";
