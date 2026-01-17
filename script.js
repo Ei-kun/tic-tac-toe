@@ -44,6 +44,14 @@ const game=( function() {
             if(board[0][2]==="X") result("player one");
             else result("player two");
         }
+        else if(board[0][0]===board[1][1] && board[1][1]===board[2][2] && board[0][0]!==""){
+            if(board[0][0]==="X") result("player one");
+            else result("player two");
+        }
+        else if(board[0][2]===board[1][1] && board[1][1]===board[2][0] && board[0][2]!==""){
+            if(board[0][2]==="X") result("player one");
+            else result("player two");
+        }
         else{
             for(let x=0;x<3;x++){
                 for(let y=0;y<3;y++){
