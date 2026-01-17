@@ -12,7 +12,15 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
+}
+
+h1{
+    font-family: 'Roboto',sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    margin: 0;
 }
 
 .gameboard{
@@ -55,4 +63,14 @@ body > button{
 body > button:hover{
     transform: scale(1.08);            
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.result-text{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.hidden{
+    display: none;
 }

@@ -6,8 +6,12 @@
     <title>Tic Tac Toe</title>
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1 class="header">Tic-Tac-Toe</h1>
     <div class="gameboard">
         <div data-row=0 data-col=0><span></span></div>
         <div data-row=0 data-col=1><span></span></div>
@@ -20,5 +24,8 @@
         <div data-row=2 data-col=2><span></span></div>
     </div>
     <button class="restart">Restart</button>
+    <div class="result-icon hidden"><img></div>
+    <div class="result-text hidden"></div>
+    <button class="new-game hidden">New Game</button>
 </body>
 </html>
